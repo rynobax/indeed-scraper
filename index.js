@@ -8,7 +8,8 @@ const indeedScraper = require('./lib/scraper.js');
  * @property {string} url - Url of the job page
  * @property {string} company - Company Name
  * @property {string} location - Location of the job
- * @property {number} date - How many days ago the job was posted
+ * @property {Date} date - The date the job was posted
+ * @property {string} age - How many days ago the job was posted
  */
 
 /**
