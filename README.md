@@ -23,12 +23,12 @@ query() returns a Promise, the result of which is an array of Job objects
 ```
 /**
  * @typedef Job
- * @property {string} jobtitle - Title of the job
+ * @property {string} title - Title of the job
  * @property {string} summary - Beginning of the job description
  * @property {string} url - Url of the job page
  * @property {string} company - Company Name
  * @property {string} location - Location of the job
- * @property {Date} date - The date the job was posted
+ * @property {Date} date - The date the job was posted (Parsed using chrono)
  * @property {string} age - How many days ago the job was posted
  */
 
