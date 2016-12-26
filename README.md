@@ -20,10 +20,10 @@ const queryOptions = {
   city: 'Seattle, WA',
   radius: '25',
   level: 'entry_level',
-  maxAge: '7',
   jobType: 'fulltime',
-  limit: '100',
-  sort: 'date'
+  maxAge: '7',
+  sort: 'date',
+  limit: '100'
 };
 
 indeed.query(queryOptions).then(res => {
@@ -35,9 +35,9 @@ query() accepts a _queryOptions_ object and returns a Promise of an array of _Jo
 
 * **queryOptions** object:
 	* **query** - _string_ - The text to search. (i.e. Software Developer) - Default: _Empty String_
-	* **cityName** - _string_ - The name of the city.  Should be in the format 'Seattle, WA'. - Default: _Empty String_
+	* **city** - _string_ - The name of the city.  Should be in the format 'Seattle, WA'. - Default: _Empty String_
 	* **radius** - _string_ - The search radius in miles - Default: '25'
-	* **experienceLevel** - _string_ - _Empty String_, entry_level, mid_level, or senior_level - Default: _Empty String_
+	* **level** - _string_ entry_level, mid_level, or senior_level - Default: _Empty String_
 	* **jobType** - _string_ - fulltime, contract, parttime, temporary, internship, commission - Default: _Empty String_
 	* **maxAge** - _string_ - The maximum age of jobs that are returned - Default: _Empty String_ (No max age)
 	* **sort** - _string_ - relevance, date - Default: 'relevance'
@@ -45,10 +45,10 @@ query() accepts a _queryOptions_ object and returns a Promise of an array of _Jo
 
 * **Job** object:
 	* **title** - _string_ - Title of the job
-	* **summary** - _string_ - Beginning of the job description
-	* **url** - _string_ - Url of the job page
 	* **company** - _string_ - Company Name
 	* **location** - _string_ - Location of the job
+	* **summary** - _string_ - Beginning of the job description
+	* **url** - _string_ - Url of the job page
 	* **postDate** - _string_ - A string describing how long ago the job was posted
 
 ## Contributing
