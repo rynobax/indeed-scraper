@@ -31,12 +31,9 @@ indeed.query(queryOptions).then(res => {
 });
 ```
 
-## API
-query() returns a Promise, the result of which is an array of Job objects
-```
-query(queryObject); // Returns promise<Job[]>
-```
-* **QueryObject** object:
+query() accepts a _queryOptions_ object and returns a Promise of an array of _Job_ objects.
+
+* **queryOptions** object:
 	* **query** - _string_ - The text to search. (i.e. Software Developer) - Default: ''
 	* **cityName** - _string_ - The name of the city.  Should be in the format 'Seattle, WA'. - Default: ''
 	* **radius** - _string_ - The search radius in miles - Default: '25'
