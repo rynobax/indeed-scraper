@@ -15,39 +15,48 @@ const indeed = require('indeed-scraper');
 ```
 Query Indeed:
 ```
-indeed.query('Software', 'Seattle, WA', 25, 'entry_level', 7).then(res => {
-	console.log(res); // An array of objects which represent jobs
+const queryOptions = {
+  query: 'Software',
+  city: 'Seattle, WA',
+  radius: '25',
+  level: 'entry_level',
+  maxAge: '7',
+  jobType: 'fulltime',
+  limit: '100',
+  sort: 'date'
+};
+
+indeed.query(queryOptions).then(res => {
+	console.log(res); // An array of Job objects
 });
 ```
 
 ## API
 query() returns a Promise, the result of which is an array of Job objects
 ```
-/**
- * @typedef Job
- * @property {string} title - Title of the job
- * @property {string} summary - Beginning of the job description
- * @property {string} url - Url of the job page
- * @property {string} company - Company Name
- * @property {string} location - Location of the job
- * @property {Date} date - The date the job was posted (Parsed using chrono)
- * @property {string} age - How many days ago the job was posted
- */
+* **Job** object:
+	* **title** - _string_ - Title of the job
+	* **summary** - _string_ - Beginning of the job description
+	* **url** - _string_ - Url of the job page
+	* **company** - _string_ - Company Name
+	* **location** - _string_ - Location of the job
+	* **postDate** - _string_ - A string describing how long ago the job was posted
 
-/**
- * Get job results from Indeed
- * @param {query} The text to search (i.e. Software Developer)
- * @param {cityName} The name of the city.  Must be in the format 'Seattle, WA'
- * @param {radius} The search radius (Default is 25)
- * @param {experienceLevel} 'entry_level', mid_level', or 'senior_level'
- * @param {maxAge} The maximum age of jobs that are returned
- * @return {promise<Job[]>}  
- */
-query(query, cityName, radius, experienceLevel, maxAge)
+* **QueryObject** object:
+	* **query** - _string_ - The text to search. (i.e. Software Developer) - Default: ''
+	* **cityName** - _string_ - The name of the city.  Should be in the format 'Seattle, WA'. - Default: ''
+	* **radius** - _string_ - The search radius in miles - Default: '25'
+	* **experienceLevel** - _string_ - '', 'entry_level', mid_level', or 'senior_level' - Default: ''
+	* **jobType** - _string_ - '', 'fulltime', 'contract', 'parttime', 'temporary', 'internship', or 'commission' - Default: ''
+	* **maxAge** - _string_ - The maximum age of jobs that are returned - Default: '' (No max age)
+	* **sort** - _string_ - 'relevance' or 'date' - Default: 'relevance'
+	* **limit** - _number_ - The maximum number of jobs to return - Default: 0 (No limit)
+
+query(queryObject) // Returns promise<Job[]>
 ```
 
 ## Contributing
-If you have an idea on how to improve this, feel free to contribute!
+If you have an idea on how to improve this package, feel free to contribute!
 
 1. Clone or fork the repository
 2. Make changes
