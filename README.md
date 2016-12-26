@@ -33,7 +33,7 @@ indeed.query(queryOptions).then(res => {
 
 ## API
 query() returns a Promise, the result of which is an array of Job objects
-```
+
 * **Job** object:
 	* **title** - _string_ - Title of the job
 	* **summary** - _string_ - Beginning of the job description
@@ -51,8 +51,8 @@ query() returns a Promise, the result of which is an array of Job objects
 	* **maxAge** - _string_ - The maximum age of jobs that are returned - Default: '' (No max age)
 	* **sort** - _string_ - 'relevance' or 'date' - Default: 'relevance'
 	* **limit** - _number_ - The maximum number of jobs to return - Default: 0 (No limit)
-
-query(queryObject) // Returns promise<Job[]>
+```
+query(queryObject); // Returns promise<Job[]>
 ```
 
 ## Contributing
