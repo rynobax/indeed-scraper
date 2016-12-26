@@ -33,15 +33,9 @@ indeed.query(queryOptions).then(res => {
 
 ## API
 query() returns a Promise, the result of which is an array of Job objects
-
-* **Job** object:
-	* **title** - _string_ - Title of the job
-	* **summary** - _string_ - Beginning of the job description
-	* **url** - _string_ - Url of the job page
-	* **company** - _string_ - Company Name
-	* **location** - _string_ - Location of the job
-	* **postDate** - _string_ - A string describing how long ago the job was posted
-
+```
+query(queryObject); // Returns promise<Job[]>
+```
 * **QueryObject** object:
 	* **query** - _string_ - The text to search. (i.e. Software Developer) - Default: ''
 	* **cityName** - _string_ - The name of the city.  Should be in the format 'Seattle, WA'. - Default: ''
@@ -51,9 +45,14 @@ query() returns a Promise, the result of which is an array of Job objects
 	* **maxAge** - _string_ - The maximum age of jobs that are returned - Default: '' (No max age)
 	* **sort** - _string_ - 'relevance' or 'date' - Default: 'relevance'
 	* **limit** - _number_ - The maximum number of jobs to return - Default: 0 (No limit)
-```
-query(queryObject); // Returns promise<Job[]>
-```
+
+* **Job** object:
+	* **title** - _string_ - Title of the job
+	* **summary** - _string_ - Beginning of the job description
+	* **url** - _string_ - Url of the job page
+	* **company** - _string_ - Company Name
+	* **location** - _string_ - Location of the job
+	* **postDate** - _string_ - A string describing how long ago the job was posted
 
 ## Contributing
 If you have an idea on how to improve this package, feel free to contribute!
