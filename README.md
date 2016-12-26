@@ -1,4 +1,6 @@
 # indeed-scraper
+[![npm package](https://nodei.co/npm/indeed-scraper.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/request/)
+
 ### A Node.js package for getting job listings from Indeed.com
 
 ## Installation
