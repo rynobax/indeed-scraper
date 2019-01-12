@@ -50,6 +50,7 @@ query() accepts a _queryOptions_ object and returns a Promise of an array of _Jo
 	* **summary** - _string_ - Beginning of the job description
 	* **url** - _string_ - Url of the job page
 	* **postDate** - _string_ - A string describing how long ago the job was posted
+	* **salary** - _string_ - A string with salary information (can be empty)
 
 ## Contributing
 If you have an idea on how to improve this package, feel free to contribute!
