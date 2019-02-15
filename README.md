@@ -16,6 +16,7 @@ const indeed = require('indeed-scraper');
 Query Indeed:
 ```
 const queryOptions = {
+  host: 'www.indeed.com',
   query: 'Software',
   city: 'Seattle, WA',
   radius: '25',
@@ -34,6 +35,7 @@ indeed.query(queryOptions).then(res => {
 query() accepts a _queryOptions_ object and returns a Promise of an array of _Job_ objects.
 
 * **queryOptions** object:
+	* **host** - _string_ - The host to query. ([country overview](https://www.indeed.com/worldwide)) - Default: 'www.indeed.com'
 	* **query** - _string_ - The text to search. (i.e. Software Developer) - Default: _Empty String_
 	* **city** - _string_ - The name of the city.  Should be in the format 'Seattle, WA'. - Default: _Empty String_
 	* **radius** - _string_ - The search radius in miles - Default: '25'
