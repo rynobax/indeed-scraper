@@ -1,6 +1,6 @@
 {
   "name": "indeed-scraper",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A Node.js package for getting job listings from Indeed.com",
   "main": "index.js",
   "dependencies": {
