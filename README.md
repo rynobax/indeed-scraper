@@ -24,7 +24,7 @@ const queryOptions = {
   jobType: 'fulltime',
   maxAge: '7',
   sort: 'date',
-  limit: '100'
+  limit: 100
 };
 
 indeed.query(queryOptions).then(res => {
@@ -44,6 +44,7 @@ query() accepts a _queryOptions_ object and returns a Promise of an array of _Jo
 	* **maxAge** - _string_ - The maximum age of jobs that are returned - Default: _Empty String_ (No max age)
 	* **sort** - _string_ - relevance, date - Default: 'relevance'
 	* **limit** - _number_ - The maximum number of jobs to return - Default: 0 (No limit)
+	* **excludeSponsored** - _number_ - Exclude sponsored job postings from the results - Default: false
 
 * **Job** object:
 	* **title** - _string_ - Title of the job

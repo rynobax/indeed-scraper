@@ -1,6 +1,6 @@
 {
   "name": "indeed-scraper",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "A Node.js package for getting job listings from Indeed.com",
   "main": "index.js",
   "dependencies": {
@@ -8,9 +8,7 @@
     "request": "^2.79.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rynobax/indeed-scraper.git"
