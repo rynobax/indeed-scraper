@@ -16,6 +16,9 @@
     "np": "^6.2.0",
     "prettier": "^1.19.1"
   },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rynobax/indeed-scraper.git"
