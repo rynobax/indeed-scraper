@@ -4,7 +4,7 @@
   "description": "A Node.js package for getting job listings from Indeed.com",
   "main": "index.js",
   "scripts": {
-    "prettier": "prettier --write lib/scraper.js"
+    "publish": "np --no-tests"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
+    "np": "^6.2.0",
     "prettier": "^1.19.1"
   },
   "repository": {
