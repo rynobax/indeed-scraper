@@ -3,12 +3,18 @@
   "version": "3.0.2",
   "description": "A Node.js package for getting job listings from Indeed.com",
   "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write lib/scraper.js"
+  },
   "dependencies": {
     "cheerio": "^0.22.0",
     "request": "^2.79.0"
   },
-  "devDependencies": {},
-  "scripts": {},
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rynobax/indeed-scraper.git"
@@ -25,5 +31,13 @@
   "bugs": {
     "url": "https://github.com/rynobax/indeed-scraper/issues"
   },
-  "homepage": "https://github.com/rynobax/indeed-scraper#readme"
+  "homepage": "https://github.com/rynobax/indeed-scraper#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
 }
