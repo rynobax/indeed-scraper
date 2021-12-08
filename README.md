@@ -67,7 +67,6 @@ query() accepts a _queryOptions_ object and returns a Promise of an array of _Jo
   - **postDate** - _string_ - A string describing how long ago the job was posted
   - **salary** - *string* - A string with salary information (can be empty)
   - **isEasyApply** - _boolean_ - A boolean describing if the job is easy apply
-  - **originalJobLink** = *string* - A string with the original job posting outside of indeed
 
 ## Contributing
 
