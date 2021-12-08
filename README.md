@@ -38,7 +38,7 @@ const queryOptions = {
 };
 
 indeed.query(queryOptions).then(res => {
-	console.log(res); // An array of Job objects
+ console.log(res); // An array of Job objects
 });
 ```
 
@@ -55,6 +55,8 @@ query() accepts a _queryOptions_ object and returns a Promise of an array of _Jo
   - **sort** - _string_ - relevance, date - Default: 'relevance'
   - **limit** - *number* - The maximum number of jobs to return - Default: 0 (No limit)
   - **excludeSponsored** - _boolean_ - Exclude sponsored job postings from the results - Default: false
+  - **excludeKeyWords** - *array of strings* - Exclude all the key words from job postings - Default: []
+  - **includeKeyWords** - *array of strings* - Include any of the key words in the job postings - Default: []
 
 - **Job** object:
   - **title** - *string* - Title of the job
@@ -65,6 +67,7 @@ query() accepts a _queryOptions_ object and returns a Promise of an array of _Jo
   - **postDate** - _string_ - A string describing how long ago the job was posted
   - **salary** - *string* - A string with salary information (can be empty)
   - **isEasyApply** - _boolean_ - A boolean describing if the job is easy apply
+  - **originalJobLink** = *string* - A string with the original job posting outside of indeed
 
 ## Contributing
 
