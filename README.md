@@ -38,7 +38,7 @@ const queryOptions = {
 };
 
 indeed.query(queryOptions).then(res => {
- console.log(res); // An array of Job objects
+  console.log(res); // An array of Job objects
 });
 ```
 
